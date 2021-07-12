@@ -7,7 +7,7 @@ const main = async () => {
   const authToken = "token " + process.env.DISCUSSIONS_TOKEN
 
   const repository = await getRepositoryData(authToken)
-  const discussionBody = await readTemplateFile()
+  const discussionBody = await buildDiscussionBody()
   const discussionTitle = buildDiscussionTitle()
 
   const categoryName = core.getInput("category") || "General"
@@ -54,6 +54,15 @@ const readTemplateFile = async () => {
   const tools = new Toolkit()
   const content = await tools.readFile(template)
   return content
+}
+
+const buildDiscussionBody = async () => {
+  const discussionBody = core.getInput("discussion-body");
+  if(discussionBody) {
+    return discussionBody;
+  } else {
+    return await readTemplateFile();
+  }
 }
 
 const buildDiscussionTitle = () => {
