@@ -1,0 +1,27 @@
+{
+  "name": "create-a-discussion",
+  "version": "1.0.0",
+  "description": "This action creates a GitHub repository discussion from a MD template.",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
+    "actions-toolkit": "^6.0.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deborah-Digges/create-a-discussion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deborah-Digges/create-a-discussion/issues"
+  },
+  "homepage": "https://github.com/Deborah-Digges/create-a-discussion#readme"
+}
