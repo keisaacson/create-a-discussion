@@ -12,6 +12,10 @@ This action creates a GitHub repository discussion from a MD template.
 
 **Optional** The filepath to the markdown template for the discussion. Default `"./.github/DISCUSSION_TEMPLATE.md"`.
 
+### `discussion-body`
+
+**Optional** The content of the discussion body as a string. Either `discussion-body` or the `filename` should be passed
+
 ### `title`
 
 **Required** The title of the discussion to be created.

@@ -7,6 +7,9 @@ inputs:
   filename:
     description: 'Filepath to the markdown template for the discussion'
     required: false
+  discussion-body:
+    description: 'The content of the discussion template as a string'
+    required: false
   title:
     description: 'Title for the discussion'
     required: true
