@@ -6,8 +6,11 @@ const moment = require("moment")
 const main = async () => {
   const authToken = "token " + process.env.DISCUSSIONS_TOKEN
 
-  const repository = await getRepositoryData(authToken)
   const discussionBody = await buildDiscussionBody()
+  const replacementText = core.GetInput("replacement_text") || ""
+  const finalDiscussionBody = discussionBody.replaceAll("@PLACEHOLDER_TEXT", replacementText)
+
+  const repository = await getRepositoryData(authToken)
   const discussionTitle = buildDiscussionTitle()
 
   const categoryName = core.getInput("category") || "General"
