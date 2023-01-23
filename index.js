@@ -16,7 +16,7 @@ const main = async () => {
   const categoryName = core.getInput("category") || "General"
   const category = repository.discussionCategories.nodes.find(c => c.name === categoryName)
 
-  await createDiscussion(authToken, discussionBody, discussionTitle, repository.id, category.id)
+  await createDiscussion(authToken, finalDiscussionBody, discussionTitle, repository.id, category.id)
 }
 
 const getRepositoryData = async (authToken) => {
