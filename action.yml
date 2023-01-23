@@ -10,6 +10,9 @@ inputs:
   discussion-body:
     description: 'The content of the discussion template as a string'
     required: false
+  replacement-text:
+    description: 'This text will replace any instances of @PLACEHOLDER_TEXT in the discussion body'
+    required: false
   title:
     description: 'Title for the discussion'
     required: true

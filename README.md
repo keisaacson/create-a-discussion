@@ -16,6 +16,10 @@ This action creates a GitHub repository discussion from a MD template.
 
 **Optional** The content of the discussion body as a string. Either `discussion-body` or the `filename` should be passed
 
+### `replacement-text`
+
+**Optional** This text will replace any instances of @PLACEHOLDER_TEXT in the discussion body
+
 ### `title`
 
 **Required** The title of the discussion to be created.
