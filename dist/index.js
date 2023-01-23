@@ -21051,7 +21051,7 @@ const main = async () => {
 
   const discussionBody = await buildDiscussionBody()
   const replacementText = core.getInput("replacement-text") || ""
-  const finalDiscussionBody = discussionBody.replaceAll("@PLACEHOLDER_TEXT", replacementText)
+  const finalDiscussionBody = await discussionBody.replaceAll("@PLACEHOLDER_TEXT", replacementText)
 
   const repository = await getRepositoryData(authToken)
   const discussionTitle = buildDiscussionTitle()
