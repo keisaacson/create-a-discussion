@@ -7,7 +7,7 @@ const main = async () => {
   const authToken = "token " + process.env.DISCUSSIONS_TOKEN
 
   const discussionBody = await buildDiscussionBody()
-  const replacementText = core.GetInput("replacement-text") || ""
+  const replacementText = core.getInput("replacement-text") || ""
   const finalDiscussionBody = discussionBody.replaceAll("@PLACEHOLDER_TEXT", replacementText)
 
   const repository = await getRepositoryData(authToken)
